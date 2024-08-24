@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunflower Bouquet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .bouquet {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .bouquet img {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+            animation: fadeInZoom 2s forwards;
+        }
+        .new-image {
+            width: 1000px;
+            height: 1000px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 0; /* Ensure this is at the back */
+            animation-delay: 3s; /* Adjust the delay so this comes in last */
+        }
+        .large-sunflower {
+            width: 400px;
+            height: 500px;
+            top: 35%;
+            left: 45%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 0;
+            animation-delay: 0s;
+        }
+        .medium-sunflower {
+            width: 300px;
+            height: 300px;
+            z-index: 20;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        .medium-sunflower:nth-of-type(2) { animation-delay: 0.2s; }
+        .medium-sunflower:nth-of-type(3) { animation-delay: 0.4s; }
+        .medium-sunflower:nth-of-type(4) { animation-delay: 0.6s; }
+        .medium-sunflower:nth-of-type(5) { animation-delay: 0.8s; }
+        .medium-sunflower:nth-of-type(6) { animation-delay: 1s; }
+        .medium-sunflower:nth-of-type(7) { animation-delay: 1.2s; }
+        .medium-sunflower:nth-of-type(8) { animation-delay: 1.4s; }
+        .medium-sunflower:nth-of-type(9) { animation-delay: 1.6s; }
+        .new-image:nth-of-type(1) { animation-delay: 2s; }
+
+        .medium-sunflower:nth-of-type(10),
+        .medium-sunflower:nth-of-type(11),
+        .medium-sunflower:nth-of-type(12),
+        .medium-sunflower:nth-of-type(13),
+        .medium-sunflower:nth-of-type(14),
+        .medium-sunflower:nth-of-type(15),
+        .medium-sunflower:nth-of-type(16) {
+            width: 300px;
+            height: 300px;
+            z-index: 10;
+            animation-delay: 1.8s;
+        }
+
+        /* Circular positioning */
+        .sunflower1 { top: 0%; left: 50%; }
+        .sunflower2 { top: 25%; left: 75%; }
+        .sunflower3 { top: 50%; left: 100%; }
+        .sunflower4 { top: 75%; left: 75%; }
+        .sunflower5 { top: 100%; left: 50%; }
+        .sunflower6 { top: 75%; left: 25%; }
+        .sunflower7 { top: 50%; left: 0%; }
+        .sunflower8 { top: 25%; left: 25%; }
+
+        .sunflower11 { top: 0%; left: 80%; }
+        .sunflower12 { top: 25%; left: 100%; }
+        .sunflower13 { top: 70%; left: 90%; }
+        .sunflower14 { top: 90%; left: 80%; }
+        .sunflower15 { top: 90%; left: 30%; }
+        .sunflower16 { top: 70%; left: 10%; }
+        .sunflower17 { top: 25%; left: 0%; }
+        .sunflower18 { top: 0%; left: 20%; }
+
+        @keyframes fadeInZoom {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="bouquet">
+    <!-- The new image that comes in last -->
+    <img src="back.png" alt="New Image" class="new-image">
+    
+    <!-- Large central sunflower -->
+    <img src="./image8.jpeg" alt="Large Sunflower" class="large-sunflower">
+    
+    <!-- Surrounding medium and small sunflowers -->
+    <img src="./1.png" alt="Sunflower 1" class="medium-sunflower sunflower1">
+    <img src="./2.png" alt="Sunflower 2" class="medium-sunflower sunflower2">
+    <img src="1.png" alt="Sunflower 3" class="medium-sunflower sunflower3">
+    <img src="1.png" alt="Sunflower 4" class="medium-sunflower sunflower4">
+    <img src="1.png" alt="Sunflower 5" class="medium-sunflower sunflower5">
+    <img src="1.png" alt="Sunflower 6" class="medium-sunflower sunflower6">
+    <img src="1.png" alt="Sunflower 7" class="medium-sunflower sunflower7">
+    <img src="1.png" alt="Sunflower 8" class="medium-sunflower sunflower8">
+
+    <img src="1.png" alt="Sunflower 11" class="medium-sunflower sunflower11">
+    <img src="1.png" alt="Sunflower 12" class="medium-sunflower sunflower12">
+    <img src="1.png" alt="Sunflower 13" class="medium-sunflower sunflower13">
+    <img src="1.png" alt="Sunflower 14" class="medium-sunflower sunflower14">
+    <img src="1.png" alt="Sunflower 15" class="medium-sunflower sunflower15">
+    <img src="1.png" alt="Sunflower 16" class="medium-sunflower sunflower16">
+    <img src="1.png" alt="Sunflower 17" class="medium-sunflower sunflower17">
+    <img src="1.png" alt="Sunflower 18" class="medium-sunflower sunflower18">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
